@@ -11,7 +11,7 @@ const ContactMe = (props) => {
     <React.Fragment>
       <motion.h1
         className={props.darkmode ? "themedarktext" : "themelighttext"}
-        style={{ opacity: 1 }}
+        style={{ opacity: 1, marginBottom: 30 }}
       >
         Contact Me
       </motion.h1>
