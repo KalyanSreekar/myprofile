@@ -51,7 +51,6 @@ const AboutMe = (props) => {
   return (
     <div className="container">
       <motion.h1
-        style={{ marginTop: -40 }}
         animate={heading1}
         className={props.darkmode ? "dark" : "light"}
       >

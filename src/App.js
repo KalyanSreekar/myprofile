@@ -239,7 +239,7 @@ function App() {
           <MyProjects darkmode={darkmode} />
         </motion.div>
         <motion.div
-          className={darkmode ? "App1 themedark" : "App1 themelight"}
+          className={darkmode ? "App themedark" : "App themelight"}
           animate={contactpage}
         >
           <ContactMe darkmode={darkmode} />

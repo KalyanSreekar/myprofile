@@ -13,6 +13,7 @@ const MyProjects = (props) => {
   const secondboxtext = useAnimation();
   const [anim, setanim] = useState([false, false]);
   const startbox = () => {
+    width = box.offsetWidth;
     setanim([true, anim[1]]);
     if (width > 600) {
       firstBox.start({
@@ -42,6 +43,7 @@ const MyProjects = (props) => {
     });
   };
   const startbox2 = () => {
+    width = box.offsetWidth;
     setanim([anim[0], true]);
     if (width > 600) {
       secondBox.start({

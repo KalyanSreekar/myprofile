@@ -17,11 +17,11 @@ const ContactMe = (props) => {
       </motion.h1>
       <motion.div className="datarow">
         <FiPhoneCall
-          className={props.darkmode ? "themedarktext" : "themelighttext"}
-          style={{
-            width: "25px",
-            height: "25px",
-          }}
+          className={
+            props.darkmode
+              ? "themedarktext iconStyle"
+              : "themelighttext iconStyle"
+          }
         />
         <p
           className={props.darkmode ? "themedarktext" : "themelighttext"}
@@ -37,10 +37,6 @@ const ContactMe = (props) => {
               ? "themedarktext iconStyle"
               : "themelighttext iconStyle"
           }
-          style={{
-            width: "25px",
-            height: "25px",
-          }}
         />
         <p
           className={props.darkmode ? "themedarktext" : "themelighttext"}
@@ -58,7 +54,7 @@ const ContactMe = (props) => {
           target="_blank"
           rel="noreferrer"
           className={props.darkmode ? "themedarktext" : "themelighttext"}
-          style={{ display: "flex", borderBottom: 0 }}
+          style={{ display: "flex", borderBottom: 0, alignItems: "flex-end" }}
         >
           <p className={props.darkmode ? "themedarktext" : "themelighttext"}>
             {"Explore my Linked \t"}
@@ -69,10 +65,6 @@ const ContactMe = (props) => {
                 ? "themedarktext iconStyle"
                 : "themelighttext iconStyle"
             }
-            style={{
-              width: "25px",
-              height: "25px",
-            }}
           />
         </a>
       </motion.div>
@@ -83,10 +75,6 @@ const ContactMe = (props) => {
               ? "themedarktext iconStyle"
               : "themelighttext iconStyle"
           }
-          style={{
-            width: "25px",
-            height: "25px",
-          }}
         />
         <p
           className={props.darkmode ? "themedarktext" : "themelighttext"}
