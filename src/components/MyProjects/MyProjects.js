@@ -107,6 +107,7 @@ const MyProjects = (props) => {
           style={{
             opacity: 0,
             display: "none",
+            textAlign: "justify",
             padding: 10,
           }}
           animate={firstboxtext}
@@ -148,6 +149,7 @@ const MyProjects = (props) => {
           className={props.darkmode ? "themedarktext" : "themelighttext"}
           style={{
             opacity: 0,
+            textAlign: "justify",
             padding: 10,
             display: "none",
           }}

@@ -17,10 +17,14 @@ code {
   color: white;
   font-size: 1rem;
   text-align: center;
+  display: none;
 }
 
 @media only screen and (max-height: 600px) {
   #root {
     display: none;
+  }
+  .errormsg {
+    display: flex;
   }
 }
