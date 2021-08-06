@@ -50,7 +50,7 @@ const ContactMe = (props) => {
         className="datarow"
       >
         <a
-          href="https://www.linkedin.com/in/kalyan-sreekar-jhade-818063184/"
+          href="https://www.linkedin.com/in/kalyansreekarj/"
           target="_blank"
           rel="noreferrer"
           className={props.darkmode ? "themedarktext" : "themelighttext"}
