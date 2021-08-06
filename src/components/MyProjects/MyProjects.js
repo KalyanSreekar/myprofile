@@ -32,7 +32,7 @@ const MyProjects = (props) => {
       width: width,
       margin: 0,
       justifyContent: "flex-start",
-      height: 260,
+      height: 210,
       transition: { duration: 0.5 },
     });
     firstboxtext.start({
@@ -58,7 +58,7 @@ const MyProjects = (props) => {
     }
     secondBox.start({
       scale: 0.8,
-      height: 260,
+      height: 200,
       justifyContent: "flex-start",
       margin: 0,
       width: width,
@@ -120,6 +120,7 @@ const MyProjects = (props) => {
       </motion.div>
       <motion.div
         className="projectdiv"
+        style={{ marginTop: 20 }}
         animate={secondBox}
         onClick={startbox2}
       >
