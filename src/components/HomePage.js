@@ -37,7 +37,7 @@ const HomePage = (props) => {
           return (
             <motion.p
               key={Math.random()}
-              initial={{ opacity: 0 }}
+              initial={{ opacity: 0, marginTop: 10 }}
               animate={{ scale: 1.4, opacity: 1, originX: 0 }}
               transition={{ duration: 0.2, type: "spring", stiffness: 500 }}
               whileHover={{ scale: 2 }}
@@ -70,7 +70,7 @@ const HomePage = (props) => {
           return (
             <motion.p
               key={Math.random()}
-              initial={{ opacity: 0 }}
+              initial={{ opacity: 1, marginTop: 10 }}
               animate={{ scale: 1.4, opacity: 1, originX: 0 }}
               transition={{ duration: 0.2, type: "spring", stiffness: 500 }}
               whileTap={{
@@ -91,11 +91,7 @@ const HomePage = (props) => {
           );
         })}
       </motion.div>
-      <AnimatedBtn
-        darkmode={props.darkmode}
-        message="About Me"
-        pagechange={props.pagechange}
-      />
+      <AnimatedBtn darkmode={props.darkmode} message="About Me" />
     </React.Fragment>
   );
 };
