@@ -16,8 +16,9 @@ const MyProjects = (props) => {
     setanim([true, anim[1]]);
     if (width > 600) {
       firstBox.start({
-        width: 600,
-        transition: { duration: 0.5 },
+        width: "100%",
+        maxWidth: 600,
+        transition: { duration: 1 },
       });
       firstboxtext.start({
         opacity: 1,
@@ -44,8 +45,9 @@ const MyProjects = (props) => {
     setanim([anim[0], true]);
     if (width > 600) {
       secondBox.start({
-        width: 600,
-        transition: { duration: 0.5 },
+        width: "100%",
+        maxWidth: 600,
+        transition: { duration: 1 },
       });
       secondboxtext.start({
         opacity: 1,
