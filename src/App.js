@@ -10,6 +10,13 @@ import ContactMe from "./components/contactme/ContactMe";
 
 let toofast = false;
 function App() {
+  const obj = document.getElementById("root");
+  setTimeout(() => {
+    if (obj.offsetHeight < 600) {
+      alert("This website cant be rendered in your screen dimensions");
+    }
+  }, 200);
+
   const [darkmode, setdarkmode] = useState(true);
   const [housepage, sethousepage] = useState(true);
   const [aboutme, setaboutme] = useState(false);
@@ -202,50 +209,52 @@ function App() {
     }
   };
   return (
-    <Context.Provider
-      value={{
-        darkmode: darkmode,
-        homepage: housepage,
-        myprojects: myprojects,
-        contactme: contactme,
-        aboutme: aboutme,
-        changeaboutme: aboutmechanger,
-        changemyprojects: myprojectschanger,
-        changecontactme: contactmechanger,
-        clickHandler: clickHandler,
-      }}
-    >
-      <ThemeChanger darkmode={darkmode} changemode={changedarkmode} />
-      <div
-        onWheel={(e) => wheel(e)}
-        className={darkmode ? "maindiv themedark" : "maindiv themelight"}
+    <div>
+      <Context.Provider
+        value={{
+          darkmode: darkmode,
+          homepage: housepage,
+          myprojects: myprojects,
+          contactme: contactme,
+          aboutme: aboutme,
+          changeaboutme: aboutmechanger,
+          changemyprojects: myprojectschanger,
+          changecontactme: contactmechanger,
+          clickHandler: clickHandler,
+        }}
       >
-        <motion.div
-          animate={homepage}
-          className={darkmode ? "App themedark" : "App themelight"}
+        <ThemeChanger darkmode={darkmode} changemode={changedarkmode} />
+        <div
+          onWheel={(e) => wheel(e)}
+          className={darkmode ? "maindiv themedark" : "maindiv themelight"}
         >
-          <HomePage pagechange={changepagetotop} darkmode={darkmode} />
-        </motion.div>
-        <motion.div
-          className={darkmode ? "App1 themedark" : "App1 themelight"}
-          animate={aboutmepage}
-        >
-          <AboutMe darkmode={darkmode} />
-        </motion.div>
-        <motion.div
-          className={darkmode ? "App1 themedark" : "App1 themelight"}
-          animate={projectpage}
-        >
-          <MyProjects darkmode={darkmode} />
-        </motion.div>
-        <motion.div
-          className={darkmode ? "App themedark" : "App themelight"}
-          animate={contactpage}
-        >
-          <ContactMe darkmode={darkmode} />
-        </motion.div>
-      </div>
-    </Context.Provider>
+          <motion.div
+            animate={homepage}
+            className={darkmode ? "App themedark" : "App themelight"}
+          >
+            <HomePage pagechange={changepagetotop} darkmode={darkmode} />
+          </motion.div>
+          <motion.div
+            className={darkmode ? "App1 themedark" : "App1 themelight"}
+            animate={aboutmepage}
+          >
+            <AboutMe darkmode={darkmode} />
+          </motion.div>
+          <motion.div
+            className={darkmode ? "App1 themedark" : "App1 themelight"}
+            animate={projectpage}
+          >
+            <MyProjects darkmode={darkmode} />
+          </motion.div>
+          <motion.div
+            className={darkmode ? "App themedark" : "App themelight"}
+            animate={contactpage}
+          >
+            <ContactMe darkmode={darkmode} />
+          </motion.div>
+        </div>
+      </Context.Provider>
+    </div>
   );
 }
 
