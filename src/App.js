@@ -335,7 +335,6 @@ function App() {
   };
   const sidebarclickedaboutme = () => {
     if (aboutme) return;
-    sethousepage(true);
     if (housepage) {
       sethousepage(false);
       homepage.start({
