@@ -1,4 +1,5 @@
 import "./App.css";
+import reactDom from "react-dom";
 import { useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import HomePage from "./components/HomePage";
@@ -10,13 +11,6 @@ import ContactMe from "./components/contactme/ContactMe";
 
 let toofast = false;
 function App() {
-  const obj = document.getElementById("root");
-  setTimeout(() => {
-    if (obj.offsetHeight < 600) {
-      alert("This website cant be rendered in your screen dimensions");
-    }
-  }, 200);
-
   const [darkmode, setdarkmode] = useState(true);
   const [housepage, sethousepage] = useState(true);
   const [aboutme, setaboutme] = useState(false);
@@ -194,7 +188,7 @@ function App() {
         marginRight: "19px",
       });
       sideBar.start({
-        width: 200,
+        width: 300,
         height: "100vh",
         marginTop: "0px",
         marginLeft: "0px",
@@ -210,6 +204,7 @@ function App() {
         opacity: 1,
         marginTop: "60px",
         transition: { delay: 0.3 },
+        width: 260,
       });
       setmenuicon(true);
     } else {
@@ -468,6 +463,14 @@ function App() {
           clickHandler: clickHandler,
         }}
       >
+        {reactDom.createPortal(
+          <div className="errormsg">
+            <h2 style={{ textAlign: "center", color: "white" }}>
+              This website is not supported in your screen size
+            </h2>
+          </div>,
+          document.getElementById("uncompatablescreen")
+        )}
         <motion.div
           animate={sideBar}
           className={darkmode ? "sideBar themelight" : "sideBar themedark"}

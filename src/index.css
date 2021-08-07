@@ -14,10 +14,11 @@ code {
 }
 
 .errormsg {
-  color: white;
-  font-size: 1rem;
-  text-align: center;
   display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 @media only screen and (max-height: 600px) {
