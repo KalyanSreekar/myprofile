@@ -30,20 +30,31 @@ const ContactMe = (props) => {
           7995917616
         </p>
       </motion.div>
-      <motion.div className="datarow">
-        <FiMail
-          className={
-            props.darkmode
-              ? "themedarktext iconStyle"
-              : "themelighttext iconStyle"
-          }
-        />
-        <p
+      <motion.div
+        whileHover={{ scale: 1.2, transition: { duration: 0.2 } }}
+        className="datarow"
+      >
+        <a
+          href="mailto:kalyansreekarj@gmail.com"
+          target="_blank"
+          rel="noreferrer"
           className={props.darkmode ? "themedarktext" : "themelighttext"}
-          style={{ marginLeft: 10 }}
+          style={{ display: "flex", borderBottom: 0, alignItems: "flex-end" }}
         >
-          kalyansreekarj@gmail.com
-        </p>
+          <FiMail
+            className={
+              props.darkmode
+                ? "themedarktext iconStyle"
+                : "themelighttext iconStyle"
+            }
+          />
+          <p
+            className={props.darkmode ? "themedarktext" : "themelighttext"}
+            style={{ marginLeft: 10 }}
+          >
+            kalyansreekarj@gmail.com
+          </p>
+        </a>
       </motion.div>
       <motion.div
         whileHover={{ scale: 1.2, transition: { duration: 0.2 } }}

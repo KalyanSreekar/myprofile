@@ -175,17 +175,29 @@ function App() {
       menuline1.start({
         rotateZ: 45,
         originX: 0,
+        transition: {
+          duration: 0.4,
+        },
       });
       menuline2.start({
         opacity: 0,
+        transition: {
+          duration: 0.4,
+        },
       });
       menuline3.start({
         rotateZ: -45,
         originX: 0,
+        transition: {
+          duration: 0.4,
+        },
       });
       sideBarMenu.start({
         marginTop: "19px",
         marginRight: "19px",
+        transition: {
+          duration: 0.4,
+        },
       });
       sideBar.start({
         width: 300,
@@ -217,13 +229,22 @@ function App() {
       menuline1.start({
         rotateZ: 0,
         originX: 0,
+        transition: {
+          duration: 0.4,
+        },
       });
       menuline2.start({
         opacity: 1,
+        transition: {
+          duration: 0.4,
+        },
       });
       menuline3.start({
         rotateZ: 0,
         originX: 0,
+        transition: {
+          duration: 0.4,
+        },
       });
       sideBarMenu.start({
         marginTop: "0px",
