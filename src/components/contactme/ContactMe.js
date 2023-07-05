@@ -11,17 +11,17 @@ const ContactMe = (props) => {
     <React.Fragment>
       <motion.h1
         className={props.darkmode ? "themedarktext" : "themelighttext"}
-        style={{ opacity: 1 }}
+        style={{ opacity: 1, marginBottom: 30 }}
       >
         Contact Me
       </motion.h1>
       <motion.div className="datarow">
         <FiPhoneCall
-          className={props.darkmode ? "themedarktext" : "themelighttext"}
-          style={{
-            width: "25px",
-            height: "25px",
-          }}
+          className={
+            props.darkmode
+              ? "themedarktext iconStyle"
+              : "themelighttext iconStyle"
+          }
         />
         <p
           className={props.darkmode ? "themedarktext" : "themelighttext"}
@@ -30,35 +30,42 @@ const ContactMe = (props) => {
           7995917616
         </p>
       </motion.div>
-      <motion.div className="datarow">
-        <FiMail
-          className={
-            props.darkmode
-              ? "themedarktext iconStyle"
-              : "themelighttext iconStyle"
-          }
-          style={{
-            width: "25px",
-            height: "25px",
-          }}
-        />
-        <p
+      <motion.div
+        whileHover={{ scale: 1.2, transition: { duration: 0.2 } }}
+        className="datarow"
+      >
+        <a
+          href="mailto:kalyansreekarj@gmail.com"
+          target="_blank"
+          rel="noreferrer"
           className={props.darkmode ? "themedarktext" : "themelighttext"}
-          style={{ marginLeft: 10 }}
+          style={{ display: "flex", borderBottom: 0, alignItems: "flex-end" }}
         >
-          kalyansreekarj@gmail.com
-        </p>
+          <FiMail
+            className={
+              props.darkmode
+                ? "themedarktext iconStyle"
+                : "themelighttext iconStyle"
+            }
+          />
+          <p
+            className={props.darkmode ? "themedarktext" : "themelighttext"}
+            style={{ marginLeft: 10 }}
+          >
+            kalyansreekarj@gmail.com
+          </p>
+        </a>
       </motion.div>
       <motion.div
         whileHover={{ scale: 1.2, transition: { duration: 0.2 } }}
         className="datarow"
       >
         <a
-          href="https://www.linkedin.com/in/kalyan-sreekar-jhade-818063184/"
+          href="https://www.linkedin.com/in/kalyansreekarj/"
           target="_blank"
           rel="noreferrer"
           className={props.darkmode ? "themedarktext" : "themelighttext"}
-          style={{ display: "flex", borderBottom: 0 }}
+          style={{ display: "flex", borderBottom: 0, alignItems: "flex-end" }}
         >
           <p className={props.darkmode ? "themedarktext" : "themelighttext"}>
             {"Explore my Linked \t"}
@@ -69,10 +76,6 @@ const ContactMe = (props) => {
                 ? "themedarktext iconStyle"
                 : "themelighttext iconStyle"
             }
-            style={{
-              width: "25px",
-              height: "25px",
-            }}
           />
         </a>
       </motion.div>
@@ -83,10 +86,6 @@ const ContactMe = (props) => {
               ? "themedarktext iconStyle"
               : "themelighttext iconStyle"
           }
-          style={{
-            width: "25px",
-            height: "25px",
-          }}
         />
         <p
           className={props.darkmode ? "themedarktext" : "themelighttext"}
