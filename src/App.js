@@ -495,12 +495,9 @@ function App() {
         <motion.div
           animate={sideBar}
           className={darkmode ? "sideBar themelight" : "sideBar themedark"}
+          onClick={menuiconHandler}
         >
-          <motion.div
-            animate={sideBarMenu}
-            onClick={menuiconHandler}
-            className="menu"
-          >
+          <motion.div animate={sideBarMenu} className="menu">
             <motion.div
               animate={menuline1}
               className={
