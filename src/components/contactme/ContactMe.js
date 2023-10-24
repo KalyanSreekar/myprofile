@@ -6,6 +6,7 @@ import { FiMail } from "react-icons/fi";
 import { FiLinkedin } from "react-icons/fi";
 import { FiHome } from "react-icons/fi";
 import AnimatedBtn from "../AnimatedButton/AnimatedBtn";
+import Resume from "../../assets/resume.pdf";
 const ContactMe = (props) => {
   return (
     <React.Fragment>
@@ -93,6 +94,23 @@ const ContactMe = (props) => {
         >
           Hyderabad, Telangana, India
         </p>
+      </motion.div>
+      <motion.div
+        whileHover={{ scale: 1.2, transition: { duration: 0.2 } }}
+        className="datarow"
+      >
+        <a
+          href={Resume}
+          download="Kalyan Sreekar Resume"
+          target="_blank"
+          rel="noreferrer"
+          className={props.darkmode ? "themedarktext" : "themelighttext"}
+          style={{ display: "flex", borderBottom: 0, alignItems: "flex-end" }}
+        >
+          <p className={props.darkmode ? "themedarktext" : "themelighttext"}>
+            {"Download Resume \t"}
+          </p>
+        </a>
       </motion.div>
       <AnimatedBtn darkmode={props.darkmode} message="Home" />
     </React.Fragment>
