@@ -15,7 +15,7 @@ export default function BlogHome(props) {
   return (
     <div className="min-w-screen flex min-h-screen flex-col items-center overflow-x-hidden overflow-y-scroll">
       {!params.id ? (
-        <div className="w-[600px]">
+        <div className="w-screen p-5 sm:w-[600px]">
           <p className={`m-5 text-3xl text-light-theme`}>My Blogs</p>
           <div className="flex flex-col items-start">
             {blogs.map((blog, i) => (
