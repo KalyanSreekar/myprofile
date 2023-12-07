@@ -15,10 +15,10 @@ export default function BlogHome(props) {
   return (
     <div className="min-w-screen flex min-h-screen flex-col items-center overflow-x-hidden overflow-y-scroll">
       {!params.id ? (
-        <>
+        <div className="w-[600px]">
           <p className={`m-5 text-3xl text-light-theme`}>My Blogs</p>
           <div className="flex flex-col items-start">
-            {blogs.map((blog) => (
+            {blogs.map((blog, i) => (
               <p
                 key={blog.id}
                 onClick={() => {
@@ -26,11 +26,11 @@ export default function BlogHome(props) {
                 }}
                 className="cursor-pointer duration-100 hover:scale-105"
               >
-                {blog.title}
+                {i + 1 + ". " + blog.title}
               </p>
             ))}
           </div>
-        </>
+        </div>
       ) : (
         <>
           <p className="text-slate-100 m-3 text-3xl">
@@ -66,7 +66,7 @@ export default function BlogHome(props) {
             straight to the library and continued coding for the rest of the
             day.
             <br />
-            And this is not the only time I used to bunk classes and go to
+            And this is not the only time. I used to bunk classes and go to
             library and try to solve algorithmic questions all the time.
             <br />
             The feeling i used to get once i figured the solution is just

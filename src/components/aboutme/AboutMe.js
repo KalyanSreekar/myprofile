@@ -61,10 +61,11 @@ const AboutMe = (props) => {
         animate={anime1}
         className={props.darkmode ? "dark" : "light"}
       >
-        Hello! I am Fullstack developer. My passion for programming started when
-        I started playing games when I was young and it grew since then. I am
-        looking forward to work in big and challenging projects and have fun
-        along the way.
+        I am a Fullstack developer with a profound passion for programming that
+        originated during my early years while indulging in gaming. This passion
+        has evolved and solidified over time. I am eagerly seeking opportunities
+        to contribute to substantial and demanding projects while deriving
+        enjoyment from the journey.
       </motion.p>
       <motion.h1
         animate={heading2}

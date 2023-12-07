@@ -727,6 +727,10 @@ video {
   width: 25%;
 }
 
+.w-\[600px\] {
+  width: 600px;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -776,6 +780,11 @@ video {
 .bg-slate-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(51 65 85 / var(--tw-bg-opacity));
+}
+
+.bg-slate-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
 }
 
 .p-5 {
