@@ -61,10 +61,10 @@ const AboutMe = (props) => {
         animate={anime1}
         className={props.darkmode ? "dark" : "light"}
       >
-        Hi! I am Fullstack developer currently working at visiram solutions. My
-        passion for programming started when I started playing games when I was
-        young and it grew since then. I am looking forward to work in big and
-        challenging projects and have fun along the way.
+        Hello! I am Fullstack developer. My passion for programming started when
+        I started playing games when I was young and it grew since then. I am
+        looking forward to work in big and challenging projects and have fun
+        along the way.
       </motion.p>
       <motion.h1
         animate={heading2}
@@ -79,27 +79,33 @@ const AboutMe = (props) => {
             React JS
           </motion.p>
           <motion.p className={props.darkmode ? "row dark" : "row light"}>
-            Angular
-          </motion.p>
-          <motion.p className={props.darkmode ? "row dark" : "row light"}>
             React Native
           </motion.p>
           <motion.p className={props.darkmode ? "row dark" : "row light"}>
-            Node JS
+            Bootstrap
+          </motion.p>
+          <motion.p className={props.darkmode ? "row dark" : "row light"}>
+            Angular
+          </motion.p>
+          <motion.p className={props.darkmode ? "row dark" : "row light"}>
+            Mongo DB
           </motion.p>
         </div>
         <div className="skills">
           <motion.p className={props.darkmode ? "row dark" : "row light"}>
-            Python
+            Redux
           </motion.p>
           <motion.p className={props.darkmode ? "row dark" : "row light"}>
-            Java
+            Tailwind CSS
           </motion.p>
           <motion.p className={props.darkmode ? "row dark" : "row light"}>
-            Data Structures
+            Express JS
           </motion.p>
           <motion.p className={props.darkmode ? "row dark" : "row light"}>
-            SQL
+            Node JS
+          </motion.p>
+          <motion.p className={props.darkmode ? "row dark" : "row light"}>
+            MYSQL
           </motion.p>
         </div>
       </motion.div>
