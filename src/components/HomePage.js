@@ -2,12 +2,15 @@ import "../App.css";
 import React from "react";
 import { motion } from "framer-motion";
 import kalyan1 from "../assets/kalyan1.jpg";
+import kalyan2 from "../assets/kalyan2.jpg";
+import kalyan3 from "../assets/kalyan3.jpg";
 import AnimatedBtn from "./AnimatedButton/AnimatedBtn";
 
 const names = "Kalyan  Sreekar  J";
 const profes = "Fullstack  Developer";
 const name = names.split("");
 const profession = profes.split("");
+const Images = [kalyan1, kalyan2, kalyan3];
 const HomePage = (props) => {
   return (
     <React.Fragment>
@@ -19,7 +22,7 @@ const HomePage = (props) => {
         }}
         transition={{ duration: 0.4 }}
         alt="my pic"
-        src={kalyan1}
+        src={Images[Math.floor(Math.random() * 3)]}
         className="myimage"
       />
       <motion.div

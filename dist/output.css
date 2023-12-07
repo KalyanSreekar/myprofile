@@ -691,6 +691,10 @@ video {
   height: 5rem;
 }
 
+.h-\[250px\] {
+  height: 250px;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -729,6 +733,10 @@ video {
 
 .w-\[600px\] {
   width: 600px;
+}
+
+.w-\[250px\] {
+  width: 250px;
 }
 
 .cursor-pointer {
@@ -785,6 +793,14 @@ video {
 .bg-slate-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-center {
+  background-position: center;
 }
 
 .p-5 {
