@@ -8,6 +8,7 @@ import AboutMe from "./components/aboutme/AboutMe";
 import Context from "./context/app-context";
 import MyProjects from "./components/MyProjects/MyProjects";
 import ContactMe from "./components/contactme/ContactMe";
+import { useNavigate } from "react-router-dom";
 
 let toofast = false;
 function App() {
@@ -27,6 +28,7 @@ function App() {
   const sideBar = useAnimation();
   const sideBarMenu = useAnimation();
   const sidebardata = useAnimation();
+  const navigate = useNavigate();
   const wheel = ({ deltaY }) => {
     if (toofast) return;
     if (deltaY > 0) {
@@ -490,7 +492,7 @@ function App() {
               This website is not supported in your screen size
             </h2>
           </div>,
-          document.getElementById("uncompatablescreen")
+          document.getElementById("uncompatablescreen"),
         )}
         <motion.div
           animate={sideBar}
@@ -576,6 +578,14 @@ function App() {
             </motion.p>
           </motion.div>
         </motion.div>
+        <p
+          className={`fixed right-0 z-50 m-4 cursor-pointer text-2xl duration-100 hover:scale-125 ${
+            darkmode ? "text-light-theme" : "text-dark-theme"
+          }`}
+          onClick={() => navigate("/blogs")}
+        >
+          Blogs
+        </p>
         <ThemeChanger darkmode={darkmode} changemode={changedarkmode} />
         <div
           onWheel={(e) => wheel(e)}

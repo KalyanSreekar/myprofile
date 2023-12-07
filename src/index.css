@@ -8,6 +8,10 @@ body {
   background-color: black;
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -21,11 +25,11 @@ code {
   height: 100vh;
 }
 
-@media only screen and (max-height: 600px) {
+/* @media only screen and (max-height: 600px) {
   #root {
     display: none;
   }
   .errormsg {
     display: flex;
   }
-}
+} */
