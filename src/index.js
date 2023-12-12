@@ -1,10 +1,10 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import BlogHome from "./pages/Blog/BlogHome";
+const BlogHome = lazy(() => import("./pages/Blog/BlogHome"));
 
 const router = createBrowserRouter([
   {
@@ -13,11 +13,19 @@ const router = createBrowserRouter([
   },
   {
     path: "/blogs",
-    element: <BlogHome />,
+    element: (
+      <Suspense fallback={<p>Loading...</p>}>
+        <BlogHome />
+      </Suspense>
+    ),
     children: [
       {
         path: "/blogs/:id",
-        element: <BlogHome />,
+        element: (
+          <Suspense fallback={<p>Loading...</p>}>
+            <BlogHome />
+          </Suspense>
+        ),
       },
     ],
   },

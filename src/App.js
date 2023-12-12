@@ -1,14 +1,17 @@
 import "./App.css";
 import reactDom from "react-dom";
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 import { motion, useAnimation } from "framer-motion";
 import HomePage from "./components/HomePage";
 import ThemeChanger from "./components/ThemeChanger";
-import AboutMe from "./components/aboutme/AboutMe";
+// import AboutMe from "./components/aboutme/AboutMe";
 import Context from "./context/app-context";
-import MyProjects from "./components/MyProjects/MyProjects";
-import ContactMe from "./components/contactme/ContactMe";
+// import MyProjects from "./components/MyProjects/MyProjects";
+// import ContactMe from "./components/contactme/ContactMe";
 import { useNavigate } from "react-router-dom";
+const AboutMe = lazy(() => import("./components/aboutme/AboutMe"));
+const MyProjects = lazy(() => import("./components/MyProjects/MyProjects"));
+const ContactMe = lazy(() => import("./components/contactme/ContactMe"));
 
 let toofast = false;
 function App() {
@@ -601,19 +604,25 @@ function App() {
             className={darkmode ? "App1 themedark" : "App1 themelight"}
             animate={aboutmepage}
           >
-            <AboutMe darkmode={darkmode} />
+            <Suspense fallback={<p>Loading...</p>}>
+              <AboutMe darkmode={darkmode} />
+            </Suspense>
           </motion.div>
           <motion.div
             className={darkmode ? "App1 themedark" : "App1 themelight"}
             animate={projectpage}
           >
-            <MyProjects darkmode={darkmode} />
+            <Suspense fallback={<p>Loading...</p>}>
+              <MyProjects darkmode={darkmode} />
+            </Suspense>
           </motion.div>
           <motion.div
             className={darkmode ? "App themedark" : "App themelight"}
             animate={contactpage}
           >
-            <ContactMe darkmode={darkmode} />
+            <Suspense fallback={<p>Loading...</p>}>
+              <ContactMe darkmode={darkmode} />
+            </Suspense>
           </motion.div>
         </div>
       </Context.Provider>

@@ -61,7 +61,7 @@ const AboutMe = (props) => {
         animate={anime1}
         className={props.darkmode ? "dark" : "light"}
       >
-        I am a Fullstack developer with a profound passion for programming that
+        I am a Frontend developer with a profound passion for programming that
         originated during my early years while indulging in gaming. This passion
         has evolved and solidified over time. I am eagerly seeking opportunities
         to contribute to substantial and demanding projects while deriving
