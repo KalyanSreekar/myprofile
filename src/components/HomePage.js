@@ -40,7 +40,8 @@ const HomePage = (props) => {
   };
   return (
     <React.Fragment>
-      <motion.img
+      <div className="profileImg" />
+      {/* <motion.img
         initial={{ opacity: 0, scale: 0 }}
         animate={{
           opacity: 1,
@@ -50,7 +51,7 @@ const HomePage = (props) => {
         alt="my pic"
         src={Image}
         className="myimage"
-      />
+      /> */}
       <motion.div
         style={{
           display: "flex",
